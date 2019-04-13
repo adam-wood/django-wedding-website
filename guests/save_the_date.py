@@ -13,47 +13,19 @@ from guests.models import Party
 
 SAVE_THE_DATE_TEMPLATE = 'guests/email_templates/save_the_date.html'
 SAVE_THE_DATE_CONTEXT_MAP = {
-        'lions-head': {
-            'title': "Lion's Head",
+        'english': {
+            'title': "English",
             'header_filename': 'hearts.png',
-            'main_image': 'lions-head.jpg',
-            'main_color': '#fff3e8',
+            'main_image': 'saveTheDate_en.png',
+            'main_color': '#E9E8E7',
             'font_color': '#666666',
         },
-        'ski-trip': {
-            'title': 'Ski Trip',
+        'polish': {
+            'title': 'Polish',
             'header_filename': 'hearts.png',
-            'main_image': 'ski-trip.jpg',
-            'main_color': '#330033',
+            'main_image': 'saveTheDate_pl.png',
+            'main_color': '#E9E8E7',
             'font_color': '#ffffff',
-        },
-        'canada': {
-            'title': 'Canada!',
-            'header_filename': 'maple-leaf.png',
-            'main_image': 'canada-cartoon-resized.jpg',
-            'main_color': '#ea2e2e',
-            'font_color': '#e5ddd9',
-        },
-        'american-gothic': {
-            'title': 'American Gothic',
-            'header_filename': 'hearts.png',
-            'main_image': 'american-gothic.jpg',
-            'main_color': '#b6ccb5',
-            'font_color': '#000000',
-        },
-        'plunge': {
-            'title': 'The Plunge',
-            'header_filename': 'plunger.png',
-            'main_image': 'plunge.jpg',
-            'main_color': '#b4e6ff',
-            'font_color': '#000000',
-        },
-        'dimagi': {
-            'title': 'Dimagi',
-            'header_filename': 'commcare.png',
-            'main_image': 'join-us.jpg',
-            'main_color': '#003d71',
-            'font_color': '#d6d6d4',
         }
     }
 
@@ -105,7 +77,7 @@ def get_save_the_date_context(template_id):
         template_id = 'lions-head'
     context = copy(SAVE_THE_DATE_CONTEXT_MAP[template_id])
     context['name'] = template_id
-    context['page_title'] = 'Cory and Rowena - Save the Date!'
+    context['page_title'] = 'Adam & Aleksandra - Save the Date!'
     context['preheader_text'] = (
         "The date that you've eagerly been waiting for is finally here. "
         "Cory and Ro are getting married! Save the date!"
